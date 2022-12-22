@@ -33,7 +33,7 @@ public class SimpleTracer: NSObject {
     private var sendTimeoutTimer: Timer?
     
     private(set) var result: [TraceStep] = []
-    private var logger: ((TraceStep) -> Void)?
+    open var logger: ((TraceStep) -> Void)?
     
     public init(host: String) {
         self.host = host
